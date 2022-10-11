@@ -24,6 +24,10 @@ public class ListAggregator {
      * Calculates the maximum value in a list.
      * @return The maximum value in the list.
      */
+    public int distinct(List<Integer> list, GenericListDeduplicator deduplicator) {
+        List<Integer> distinct = deduplicator.deduplicate(list);
+        return distinct.size();
+    }
     public Integer max(List<Integer> list) {
         int max = list.get(0);
 

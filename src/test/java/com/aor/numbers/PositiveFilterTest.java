@@ -16,4 +16,12 @@ public class PositiveFilterTest {
             Assertions.assertTrue(filter.accept(i));
         }
     }
+    @Test
+    public void test_negative(){
+        PositiveFilter filter = new PositiveFilter();
+        List<Integer>negatives = Arrays.asList(-1,-65,-654,-6542,Integer.MIN_VALUE);
+        for (int i : negatives){
+            Assertions.assertFalse(filter.accept(i));
+        }
+    }
 }

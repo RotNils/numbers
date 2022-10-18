@@ -16,4 +16,13 @@ public class DivisibleByFilterTest {
         for (int i : div)
             Assertions.assertTrue(filter.accept(i));
     }
+
+    @Test
+    void divBy2_false() {
+        DivisibleByFilter filter = new DivisibleByFilter(2);
+        List<Integer> div = Arrays.asList(7,3,67,89,1001);
+
+        for (int i : div)
+            Assertions.assertFalse(filter.accept(i));
+    }
 }

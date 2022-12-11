@@ -6,7 +6,7 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 
-class ListFiltererTest {
+class ListFilterTest {
 
     @Test
     public void test() {

@@ -6,7 +6,7 @@ class ListDeduplicatorTest extends Specification{
     def 'Test deduplicate'() {
         given:
         def list = Arrays.asList(1,2,4,2,5)
-        def expected = Arrays.asList(1,2,4,5);
+        def expected = Arrays.asList(1,2,4,5)
         GenericListSorter sorter = Mock(GenericListSorter.class)
         def deduplicator = new ListDeduplicator(sorter)
         sorter.sort(_) >> Arrays.asList(1, 2, 4, 5)

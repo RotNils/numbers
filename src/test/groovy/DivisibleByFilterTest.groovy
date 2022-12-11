@@ -10,7 +10,7 @@ class DivisibleByFilterTest extends Specification{
         when:
         def list = Arrays.asList(0,2,66,88,1000)
         then:
-        list.every {it -> filter.accept(it) }
+        list.every {x -> filter.accept(x)}
     }
 
     def 'not dividable by 2'() {
@@ -19,7 +19,7 @@ class DivisibleByFilterTest extends Specification{
         when:
         def list = Arrays.asList(7,3,67,89,1001)
         then:
-        list.every {it -> !filter.accept(it) }
+        list.every {x -> !filter.accept(x)}
     }
 
 }

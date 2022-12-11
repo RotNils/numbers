@@ -13,7 +13,7 @@ class ListFilterTest extends Specification{
         filter.accept(5) >> true
         filter.accept(6) >> true
         when:
-        def filterer = new ListFilterer(filter);
+        def filterer = new ListFilterer(filter)
         then:
         Arrays.asList(1, 2, 5, 6) == filterer.filter(Arrays.asList(1, 2, 3, 4, 5, 6))
     }

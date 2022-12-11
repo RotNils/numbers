@@ -15,7 +15,7 @@ class ListAggregatorTest extends Specification{
         given:
         def aggregator = new ListAggregator()
         when:
-        def sum = aggregator.sum(list);
+        def sum = aggregator.sum(list)
         then:
         sum == 14
     }
@@ -24,7 +24,7 @@ class ListAggregatorTest extends Specification{
         given:
         def aggregator = new ListAggregator()
         when:
-        def max = aggregator.max(list);
+        def max = aggregator.max(list)
         then:
         max == 5
     }
@@ -33,7 +33,7 @@ class ListAggregatorTest extends Specification{
         given:
         def aggregator = new ListAggregator()
         when:
-        def min = aggregator.min(list);
+        def min = aggregator.min(list)
         then:
         min == 1
     }
@@ -43,7 +43,7 @@ class ListAggregatorTest extends Specification{
         def aggregator = new ListAggregator()
         def deduplicator = new ListDeduplicator(new ListSorter())
         when:
-        def count = aggregator.distinct(list, deduplicator);
+        def count = aggregator.distinct(list, deduplicator)
         then:
         count == 4
     }
